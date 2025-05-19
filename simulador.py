@@ -14,8 +14,11 @@ data_primeira_parcela = st.date_input("Data da 1ª Parcela:", min_value=date.tod
 
 # Cálculo do IOF com base apenas no valor liberado
 dias_ate_primeira_parcela = (data_primeira_parcela - date.today()).days
+dias_totais_operacao = prazo * 30  # aproximando 1 mês para 30 dias
+dias_iof = min(dias_totais_operacao, 365)
+
 iof_fixo = valor_liberado * 0.0038
-iof_dia = valor_liberado * (0.000082 * dias_ate_primeira_parcela)
+iof_dia = valor_liberado * 0.000082 * dias_iof
 iof_total = iof_fixo + iof_dia
 
 # Total financiado com IOF incluso
@@ -33,6 +36,7 @@ valor_total_a_pagar = parcela * prazo
 # Exibição dos resultados
 st.subheader("Resultado:")
 st.write(f"📅 Dias até a 1ª parcela: {dias_ate_primeira_parcela} dias")
+st.write(f"📅 Dias usados para cálculo do IOF Diário: {dias_iof} dias")
 st.write(f"✅ Valor Liberado: R$ {valor_liberado:,.2f}")
 st.write(f"📌 IOF Fixo: R$ {iof_fixo:,.2f}")
 st.write(f"📌 IOF Diário: R$ {iof_dia:,.2f}")
@@ -40,4 +44,5 @@ st.write(f"💸 IOF Total: R$ {iof_total:,.2f}")
 st.write(f"💰 Nova Parcela: R$ {parcela:,.2f}")
 st.write(f"📈 Total Financiado (com IOF): R$ {valor_total_financiado:,.2f}")
 st.write(f"📊 Valor Total a Pagar (somando todas as parcelas): R$ {valor_total_a_pagar:,.2f}")
+
 
