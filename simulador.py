@@ -8,7 +8,7 @@ st.set_page_config(page_title="Simulador de Portabilidade de Crédito", layout="
 st.markdown(
     """
     <div style="text-align: center;">
-        <img src="logo_sicoob.png" alt="Logo Sicoob Coopjustiça" width="300">
+        <img src="logo_sicoob.png" alt="logo_sicoob" width="300">
     </div>
     """,
     unsafe_allow_html=True
