@@ -15,7 +15,7 @@ data_primeira_parcela = st.date_input("Data da 1ª Parcela:", min_value=date.tod
 # Cálculo do IOF com base apenas no valor liberado
 dias_ate_primeira_parcela = (data_primeira_parcela - date.today()).days
 iof_fixo = valor_liberado * 0.0038
-iof_dia = valor_liberado * 0.000082 * dias_ate_primeira_parcela
+iof_dia = valor_liberado * (0.000082 * dias_ate_primeira_parcela)
 iof_total = iof_fixo + iof_dia
 
 # Total financiado com IOF incluso
