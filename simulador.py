@@ -22,7 +22,7 @@ st.subheader("🔢 Informações do Empréstimo")
 col1, col2 = st.columns(2)
 with col1:
     saldo_devedor = st.number_input("💰 Saldo Devedor Atual (R$):", min_value=0.0, step=100.0)
-    valor_liberado = st.number_input("💸 Valor de Troco ou Ontrato Novo (R$):", min_value=0.0, step=100.0)
+    valor_liberado = st.number_input("💸 Valor de Troco ou Contrato Novo (R$):", min_value=0.0, step=100.0)
 
 with col2:
     taxa_juros = st.number_input("📉 Nova Taxa de Juros Mensal (%):", min_value=0.0, step=0.01) / 100
