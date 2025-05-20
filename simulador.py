@@ -11,7 +11,7 @@ def formatar_reais(valor):
 
 st.image("https://github.com/Jean-Sabino/simulador-portabilidade/blob/main/logo_sicoob.png?raw=true", width=180)
 
-st.markdown("<h1 style='text-align: center; color: #004d40;'>Simulador de Operações de Crédito</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: #004d40;'>Simulador de Operações de Crédito 🏦💰</h1>", unsafe_allow_html=True)
 st.markdown("---")
 
 tabs = st.tabs(["📌 Simular valor da parcela", "📌 Simular valor liberado com base na parcela desejada"])
