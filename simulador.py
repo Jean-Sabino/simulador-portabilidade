@@ -31,7 +31,7 @@ with col2:
     data_primeira_parcela = st.date_input("📅 Data da 1ª Parcela:", min_value=date.today())
 
 if modo_simulacao == "Simular valor da parcela":
-    valor_liberado = st.number_input("💸 Valor Adicional Desejado (R$):", min_value=0.0, step=100.0)
+    valor_liberado = st.number_input("💸 Valor do Contrato Novo ou do Troco (R$):", min_value=0.0, step=100.0)
 else:
     parcela_desejada = st.number_input("💵 Valor da Parcela Desejada (R$):", min_value=0.0, step=50.0)
 
