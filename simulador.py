@@ -4,7 +4,7 @@ import math
 import pandas as pd
 import io
 
-st.set_page_config(page_title="Simulador de Operações de Crédito", layout="centered")
+st.set_page_config(page_title="Simulador de Operações de Crédito", layout="wide")
 
 def formatar_reais(valor):
     return f"R$ {valor:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
