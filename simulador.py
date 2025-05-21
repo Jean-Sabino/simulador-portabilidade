@@ -9,7 +9,6 @@ st.set_page_config(page_title="Simulador de Operações de Crédito", layout="wi
 def formatar_reais(valor):
     return f"R$ {valor:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
 
-st.image("https://github.com/Jean-Sabino/simulador-portabilidade/blob/main/logo_sicoob.png?raw=true", width=180)
 
 st.markdown("<h1 style='text-align: center; color: #004d40;'>Simulador de Operações de Crédito 🏦💰</h1>", unsafe_allow_html=True)
 st.markdown("---")
